@@ -1,5 +1,5 @@
 # Web
-[![pages-build-deployment](https://github.com/maiderabad/maiderabad.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/maiderabad/maiderabad.github.io/actions/workflows/pages/pages-build-deployment)
+[![pages-build-deployment](https://github.com/MaiderAbad/maiderabad.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/MaiderAbad/maiderabad.github.io/actions/workflows/pages/pages-build-deployment)
 
 Built with hugo
 
