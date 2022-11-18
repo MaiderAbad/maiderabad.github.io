@@ -10,7 +10,6 @@ showReadingTime: false
 # externalUrl: "https://www.google.com"
 ---
 
-
 <img src="/about/profile.jpeg" alt="About me" width="30%" class="rounded-md" style="float: left; margin: 0 5% 0 0;">
 
 {{<lead>}}
@@ -23,9 +22,9 @@ here
 
 ## About me :hatched_chick:
 
-TODO: Add more info
+TODO: rellenar
 
-## Hobbies :video_game:
+## Hobbies :video_game: :rage:
 
 - 🇪🇸 TODO: Add hobbies
 - 🇪🇸 TODO: Add more hobbies
@@ -44,7 +43,7 @@ Download cv
 {{</button>}}
 
 
-_Might not be super up-to-date, for that, please refer to my [LinkedIn](https://www.linkedin.com/in/cgutierr) profile_
+_Might not be super up-to-date, for that, please refer to my [LinkedIn](https://www.linkedin.com/in/maiderabad) profile_
 
 
 {{<lead>}}
