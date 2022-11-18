@@ -9,14 +9,14 @@ colorScheme = "congo" # valid values: Congo, Avocado, Fire, Ocean, Slate
 defaultAppearance = "light" # valid options: light or dark
 autoSwitchAppearance = false
 
-enableSearch = false
+enableSearch = true
 enableCodeCopy = true
 
 # mainSections = ["section1", "section2"]
 # robots = ""
 
 [header]
-  layout = "basic" # valid options: basic, hamburger, custom
+  layout = "hamburger" # valid options: basic, hamburger, custom
   showTitle = false
   logo = "/logo.png"
 
