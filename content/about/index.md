@@ -17,29 +17,39 @@ Hi :wave:<br>
 I'm **Maider**
 {{</lead>}}
 
-TODO: Add a headline<br>
-here
+**“Tell me and I forget, teach me and I may remember, involve me and I learn.”** -  Benjamin Franklin <br>
 
-## About me :hatched_chick:
 
-TODO: rellenar
+## 🧬 About me 
 
-## Hobbies :video_game: :rage:
+I am fascinated by combining disciplines to provide an integrated and complete solution. Probably for that reason, I decided to study Biomedical Engineering, which allowed me to merge the more technical parts of engineering and medicine. In the last year of my degree and after my stay at Great Ormond Street Hospital for Children, I decided to specialize in imaging and artificial intelligence. Therefore, after completing my master's degree, I decided to pursue a Ph.D. in computer vision to diagnose diseases by analyzing medical images. I consider myself a hard-working person with time management skills since I have always combined studies with work. I hold a cheerful, proactive, and decisive personality that easily adapts to different environments.
 
-- 🇪🇸 TODO: Add hobbies
-- 🇪🇸 TODO: Add more hobbies
-- 🇪🇸 I was born in **Bilbao**, Spain
+🌍 I was born in **Bilbao** and currently live in **Barcelona**, Spain
 
-## Skills :computer:
+## 👾 Skills 
 
-{{<skills>}}machine learning{{</skills>}}
-{{<skills>}}sleeping{{</skills>}}
-{{<skills>}}deep learning{{</skills>}}
-{{<skills>}}deep sleeping{{</skills>}}
+{{<skills>}}Machine Learning{{</skills>}}
+{{<skills>}}AI{{</skills>}}
+{{<skills>}}Python{{</skills>}}
+{{<skills>}}Shell Scripting{{</skills>}}
+{{<skills>}}MySQL{{</skills>}}
+{{<skills>}}MatLab{{</skills>}}
+{{<skills>}}R{{</skills>}}
+{{<skills>}}Computer Vision{{</skills>}}
+{{<skills>}}TensorFlow{{</skills>}}
+{{<skills>}}Keras{{</skills>}}
+{{<skills>}}PyTorch{{</skills>}}
+{{<skills>}}Docker{{</skills>}}
+{{<skills>}}NumPy{{</skills>}}
+{{<skills>}}Pandas{{</skills>}}
+{{<skills>}}OpenCV{{</skills>}}
+{{<skills>}}matplotlib{{</skills>}}
+{{<skills>}}scikit-learn{{</skills>}}
+{{<skills>}}Git{{</skills>}}
 
 <br>
 {{<button href="/docs/cv.pdf" download="download" target="_self">}}
-Download cv
+Download CV
 {{</button>}}
 
 
