@@ -53,7 +53,7 @@ Download CV
 {{</button>}}
 
 
-_Might not be super up-to-date, for that, please refer to my [LinkedIn](https://www.linkedin.com/in/maiderabad) profile_
+# _Might not be super up-to-date, for that, please refer to my [LinkedIn](https://www.linkedin.com/in/maiderabad) profile_
 
 
 {{<lead>}}
