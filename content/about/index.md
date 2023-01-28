@@ -48,13 +48,13 @@ I am fascinated by combining disciplines to provide an integrated and complete s
 {{<skills>}}Git{{</skills>}}
 
 <br>
-{{<button href="/docs/cv.pdf" download="download" target="_self">}}
+{{<button href="/docs/MAIDER ABAD_CV_EN.pdf" download="download" target="_self">}}
 Download CV
 {{</button>}}
 
-
-# _Might not be super up-to-date, for that, please refer to my [LinkedIn](https://www.linkedin.com/in/maiderabad) profile_
-
+<!--
+_Might not be super up-to-date, for that, please refer to my [LinkedIn](https://www.linkedin.com/in/maiderabad) profile_
+-->
 
 {{<lead>}}
 Feel free to contact me via [email](mailto:maider.abad97@gmail.com) :email:

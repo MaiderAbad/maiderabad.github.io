@@ -1,40 +1,169 @@
 ---
-title: "Retry, log and refresh auth tokens with Dio"
-date: 2022-11-16
-tags: ["flutter", "dart", "dio", "interceptors", "retry", "logger"]
-summary: "Learn how to use dio and interceptors to refresh tokens and retry failed requests in a Flutter app."
-draft: true
+title: "Dockerizing your projects"
+date: 2023-01-28
+tags: ["docker", "containerized environment","container image","dockerfile","development workflow","deployment process"]
+summary: "Learn how to use Docker."
+draft: false
 showTableOfContents: true
 showEdit: false
 showAuthor: true
 # externalUrl: "https://www.google.com"
 ---
-[dio](https://pub.dev/packages/dio) by [Flutterchina](https://flutterchina.club)
-
 {{<lead>}}
-In this post, I'll show you how to use dio to make HTTP requests and how to use interceptors to refresh tokens and retry failed requests, everything while easily logging the requests and responses.
+In this post I am going to give you a brief introduction to learn how to use Docker.
 {{</lead>}}
-This post was made using:
-- [dio version 4.0.6](https://pub.dev/packages/dio/versions/4.0.6)
-- [dio_smart_retry version 1.3.2](https://pub.dev/packages/dio_smart_retry/versions/1.3.2)
-- [pretty_dio_logger version 1.1.1](https://pub.dev/packages/pretty_dio_logger/versions/1.1.1)
 
-## What is dio? :monocle_face:
+This post we are using:
+- [Ubuntu 20.04 LTS (Focal Fossa)](https://releases.ubuntu.com/focal/): It's a Long-Term Support version released in April 2020 and it will be supported until April 2025 by Ubuntu.
 
-Dio is a powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc.
+## What is Docker? :pencil2:
+
+Docker is a powerful tool that allows developers to easily create, deploy, and run applications in a containerized environment. Containers are lightweight, portable, and provide a consistent environment for applications to run in, regardless of the underlying infrastructure.
  
 Concepts we will be covering in this post:
-1. Interceptors
-Interceptors are a way to intercept and modify http requests before they are sent to the server and to intercept and modify http responses before they are returned to the caller.
-2. Loggers
-A logger is a way to log the requests and responses to the console.
-3. Retries
-A retry is a way to retry a failed request.
-4. Token and Refresh Token
-A token is a way to authenticate a user and a refresh token is a way to refresh that token when it expires.
+1. Get started with Docker
+2. Create a container image
+3. Container management
+4. Share container images
+5. Other commands
 
-## Setting up dio :wrench:
+## Setting up Docker :wrench:
 
+To get started with Docker, you first need to install it on your system. You can download the installer for your operating system from the Docker website. 
+
+To download and install Docker, you can use the following commands:
+```sh
+# Update the apt package index
+sudo apt-get update
+
+# Install packages to allow apt to use a repository over HTTPS
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+
+# Add Docker's official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+# Verify the fingerprint of the key
+sudo apt-key fingerprint 0EBFCD88
+
+# Add the stable repository
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+# Update the apt package index
+sudo apt-get update
+
+# Install the latest version of Docker CE
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+This code is for **Ubuntu** systems, if you are using a different operating system, you will need to adjust the commands accordingly.
+
+Note that you need to run the commands with root or using `sudo`.
+
+Once installed, you can check that Docker is running correctly by running the command `docker info` or you can also use this command to verify that Docker is installed correctly and running
+
+```sh
+sudo docker run hello-world
+````
+It will download the "hello-world" image from the docker hub and run it in a container.
+
+
+## Create container image :milky_way:
+
+The next step is to create a container image. A container image is a lightweight, standalone, executable package that contains everything needed to run a piece of software, including the code, runtime, system tools, libraries, and settings. You can create a container image by writing a `Dockerfile`, which is a script that contains instructions for building the image.
+
+### Dockerfile example :page_facing_up:
+Here is an example `Dockerfile` that creates an image for a simple web server written in **Python**:
+
+```sh
+# Use an official Python runtime as the base image
+FROM python:3.9-slim-buster
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the requirements file into the container
+COPY requirements.txt .
+
+# Install the required packages
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the application code into the container
+COPY app.py .
+
+# Expose port 5000 for the web server to listen on
+EXPOSE 5000
+
+# Run the command to start the web server
+CMD ["python", "app.py"]
+```
+To build the image, you can run the following command:
+```sh
+docker build -t my-web-server .
+````
+This command will use the `Dockerfile` in the current directory (indicated by the `.` at the end of the command) to build the image, and give it the tag "my-web-server".
+
+The **FROM** instruction sets the base image, in this case is [python 3.9](https://peps.python.org/pep-0596/).
+
+The **WORKDIR** instruction sets the working directory in the container.
+
+The **COPY** instruction copies files from the host into the container.
+
+The **RUN** instruction runs a command in the container.
+
+The **EXPOSE** instruction informs Docker that the container listens on the specified network ports at runtime.
+
+The **CMD** instruction specifies the command to be run when a container is started from the image.
+
+You can run the container using the following command:
+```sh
+docker run -p 5000:5000 my-web-server
+```
+This command will create and start a new container using the my-web-server image, and map port 5000 on the host to port 5000 in the container.
+
+You can use a `.dockerignore` file to specify files and directories that should be ignored when building the image.
+
+You can check more detail information of the instructions that you can use in a Dockerfile in the [Docker documentation](https://docs.docker.com/engine/reference/builder/).
+
+## Container management :computer:
+
+Once you have an image, you can use the `docker run` command to start a container. The `docker run` command takes the image and creates a new container from it. You can use the `-d` option to run the container in detached mode, which means it will run in the background and you can continue to use the command line.
+
+To manage your containers, you can use the `docker ps` command to see a list of running containers. You can use the `docker stop` command to stop a container, and the `docker start` command to start it again.
+
+You can also use the docker logs command to see the logs of a container, and the docker exec command to run a command inside a running container.
+
+## Share containers :rocket:
+
+To share your container images with others, you can push them to a container registry, such as **Docker Hub**. You can use the `docker push` command to push an image to a registry, and the `docker pull` command to pull an image from a registry.
+
+## Other commands :space_invader:
+
+- After creating dockerfile you can build the **image** using: `docker build --platform linux/x86_64 -t image_name:latest ./`
+- Save **image** (it will save it as `.tar`file): `docker save -o name.tar image_name:latest` or `docker export -o name.tar image_name:latest`
+- To download docker **image** in local machine: `docker load < name.tar` or `docker import < name.tar`
+- To access and navigate in docker **container**: `docker exec -it mycontainer /bin/bash`
+- Navigate in docker **image**: `docker run -it myimage /bin/bash`
+- Remove **image** from terminal: `docker rmi img_name`
+- Stop and remove **container**: `docker stop container_name` & `docker rm container_name`
+- Remove all build cache: `docker builder prune`
+
+## Conclusions :bulb:
+In conclusion, Docker is a powerful tool that allows developers to easily create, deploy, and run applications in a containerized environment. It makes it easy to manage, deploy and share your applications. By learning how to use Docker, you can improve the efficiency and portability of your development workflow and streamline your deployment process.
+
+## References :books:
+- [Docker documentation](https://docs.docker.com/reference/)
+
+
+<!--
+## Others
 To use **dio**, you need to add it to your `pubspec.yaml` file:
 
 ```yaml
@@ -311,3 +440,4 @@ dev_dependencies:
 - [pretty_dio_logger](https://pub.dev/packages/pretty_dio_logger)
 - [flutter_appauth](https://pub.dev/packages/flutter_appauth)
 - [flutter_secure_storage](https://pub.dev/packages/flutter_secure_storage)
+-->
