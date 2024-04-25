@@ -11,7 +11,7 @@ description = "PhD Fellow, researching AI medical imaging diagnosis."
 
 dateFormat = "2 January 2006"
 
-[author]
+[params.author]
   name = "Maider Abad"
   #image = "img/profile.jpeg"
   headline = "PhD Fellow - Computer Vision"
