@@ -6,7 +6,7 @@ weight = 1
 rtl = false
 
 title = "Maider Abad"
-description = "PhD Candidate, researching AI medical imaging diagnosis."
+description = "PhD Fellow, researching AI medical imaging diagnosis."
 # copyright = "Copy, _right?_ :thinking_face:"
 
 dateFormat = "2 January 2006"
@@ -14,13 +14,13 @@ dateFormat = "2 January 2006"
 [author]
   name = "Maider Abad"
   #image = "img/profile.jpeg"
-  headline = "PhD Candidate - Computer Vision"
+  headline = "PhD Fellow - Computer Vision"
   # bio = "A little bit about you"
   links = [
     { github = "https://github.com/maiderabad" },
     { email = "mailto:maider.abad97d@gmail.com" },
     { twitter = "https://twitter.com/MaiderAbad" },
-  #   { linkedin = "https://www.linkedin.com/in/...." },
+    { linkedin = "https://www.linkedin.com/in/maider-abad/" },
   #   { link = "https://link-to-some-website.com/" },
   #   { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
   #   { apple = "https://www.apple.com" },
