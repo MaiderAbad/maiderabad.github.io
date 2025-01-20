@@ -1,0 +1,35 @@
+<div class="comments">
+	<script>
+		// Load default theme
+		var getTheme = localStorage && localStorage.getItem("appearance")
+		getTheme = getTheme == null ? '{{$.Site.Params.defaultAppearance}}' : getTheme;
+		let theme = getTheme === 'dark' ? 'photon-dark' : 'github-light';
+
+		// load utteranc comment
+		let s = document.createElement('script');
+		s.src = 'https://utteranc.es/client.js';
+		s.setAttribute('repo', 'cgutierr-zgz/cgutierr-zgz.github.io');
+		s.setAttribute('issue-term', 'pathname');
+		s.setAttribute('theme', theme);
+		s.setAttribute('crossorigin', 'anonymous');
+		s.setAttribute('async', '');
+		document.querySelector('div.comments').innerHTML = '';
+		document.querySelector('div.comments').appendChild(s);
+		// listen for theme change
+		window.addEventListener("DOMContentLoaded", (event) => {
+			const switcher = document.getElementById("appearance-switcher-0");
+			if (switcher) {
+				switcher.addEventListener("click", () => {
+					let theme = document.documentElement.classList.contains("dark") ? 'photon-dark' : 'github-light';
+					const message = {
+						type: 'set-theme',
+						theme: theme
+					};
+					const iframe = document.querySelector('.utterances-frame');
+					iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+				});
+			}
+		});
+
+	</script>
+</div>
