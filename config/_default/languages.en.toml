@@ -14,12 +14,12 @@ dateFormat = "2 January 2006"
 [author]
   name = "Maider Abad"
   #image = "img/profile.jpeg"
-  headline = "PhD in Network and Information Technologies"
+  headline = "PhD - Network and Information Technologies"
   # bio = "A little bit about you"
   links = [
     { github = "https://github.com/maiderabad" },
     { email = "mailto:maider.abad97d@gmail.com" },
-    { twitter = "https://twitter.com/MaiderAbad" },
+  #  { twitter = "https://twitter.com/MaiderAbad" },
     { linkedin = "https://www.linkedin.com/in/maider-abad/" },
   #   { link = "https://link-to-some-website.com/" },
   #   { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
