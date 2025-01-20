@@ -9,10 +9,11 @@ showEdit: false
 showAuthor: true
 # externalUrl: "https://www.nature.com/articles/s41598-024-56171-6"
 ---
+{{<lead>}}
+Advancements in artificial intelligence (AI) have revolutionized medical diagnostics, providing tools that promise both speed and accuracy. In one of my recent studies, published in *Scientific Reports*, I explored how ensemble learning techniques can improve the generalization of pre-trained convolutional neural networks (CNNs) for disease detection using chest X-ray images. This post delves deeper into the challenges we addressed, our methodology, key findings, and the broader implications of this research. 
 
-# Enhancing Disease Detection with Model Ensembles: A Comprehensive Study on Chest X-ray Analysis
-
-Advancements in artificial intelligence (AI) have revolutionized medical diagnostics, providing tools that promise both speed and accuracy. In one of my recent studies, published in *Scientific Reports*, I explored how ensemble learning techniques can improve the generalization of pre-trained convolutional neural networks (CNNs) for disease detection using chest X-ray images. This post delves deeper into the challenges we addressed, our methodology, key findings, and the broader implications of this research.
+Refer to the [full article](https://doi.org/10.1038/s41598-024-56171-6) for more details.
+{{</lead>}}
 
 ---
 
@@ -45,7 +46,7 @@ Entropy measures the uncertainty of a model's prediction. A high entropy value i
    - Images were resized to **256x256 pixels** and normalized for consistent preprocessing.
 3. **Training Procedure:**
    - Transfer learning was applied, freezing pre-trained layers and adding custom dense layers with dropout regularization to prevent overfitting.
-   - The models were trained for **50 epochs** using the Adam optimizer with a learning rate of **10^-4**.
+   - The models were trained for **50 epochs** using the Adam optimizer with a learning rate of **$10^{-4}$**.
 4. **Ensemble Methodology:**
    - Entropy values were calculated for each model's prediction.
    - Weights were assigned to each model output using an exponential function of entropy.
