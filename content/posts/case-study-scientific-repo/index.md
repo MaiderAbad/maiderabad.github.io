@@ -17,7 +17,7 @@ Refer to the [full article](https://doi.org/10.1038/s41598-024-56171-6) for more
 
 ---
 
-## The Challenge: Generalization in Medical Image Analysis :triangular_flag_on_post:
+## The Challenge: Generalization in Medical Imaging :triangular_flag_on_post:
 
 Medical imaging models often exhibit strong performance during internal testing but struggle when applied to external datasets—a phenomenon known as the "generalization gap." This challenge arises primarily from two factors:
 
