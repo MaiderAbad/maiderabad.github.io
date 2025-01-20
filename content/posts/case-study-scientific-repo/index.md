@@ -7,7 +7,7 @@ draft: false
 showTableOfContents: true
 showEdit: false
 showAuthor: true
-externalUrl: "https://www.nature.com/articles/s41598-024-56171-6"
+# externalUrl: "https://www.nature.com/articles/s41598-024-56171-6"
 ---
 
 # Enhancing Disease Detection with Model Ensembles: A Comprehensive Study on Chest X-ray Analysis
