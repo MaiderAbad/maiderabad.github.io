@@ -17,7 +17,7 @@ Refer to the [full article](https://doi.org/10.1038/s41598-024-56171-6) for more
 
 ---
 
-## The Challenge: Generalization in Medical Image Analysis
+## The Challenge: Generalization in Medical Image Analysis :triangular_flag_on_post:
 
 Medical imaging models often exhibit strong performance during internal testing but struggle when applied to external datasets—a phenomenon known as the "generalization gap." This challenge arises primarily from two factors:
 
@@ -30,11 +30,11 @@ This stark contrast underscores the critical need for robust methodologies that 
 
 ---
 
-## Our Solution: Ensemble Learning with Entropy-Based Weighting
+## Our Solution: Ensemble Learning with Entropy-Based Weighting :computer:
 
 To address the generalization gap, we developed an ensemble learning approach that combines predictions from multiple models. Unlike traditional ensembling techniques (e.g., simple averaging or majority voting), our method employs **uncertainty-based weighting** to assign dynamic weights to each model's output based on its entropy.
 
-### Why Use Entropy?
+### Why Use Entropy? 
 
 Entropy measures the uncertainty of a model's prediction. A high entropy value indicates greater uncertainty, whereas a low entropy value signifies confidence. By assigning higher weights to models with lower entropy, our approach prioritizes more reliable predictions, leading to improved overall accuracy.
 
@@ -54,7 +54,7 @@ Entropy measures the uncertainty of a model's prediction. A high entropy value i
 
 ---
 
-## Results: Improved Accuracy and Robustness
+## Results: Improved Accuracy and Robustness :boom:
 
 The ensemble method demonstrated remarkable improvements over individual models, particularly in external validation scenarios.
 
@@ -72,7 +72,7 @@ These results indicate that the ensemble model not only outperforms individual n
 
 ---
 
-## Key Insights and Broader Applications
+## Key Insights and Broader Applications :mag:
 
 ### 1. **Generalization to Diverse Datasets**
 Our results emphasize the importance of incorporating data from multiple sources during both training and validation. This approach ensures that models are exposed to a wider range of imaging variations, improving their adaptability to new datasets.
@@ -85,7 +85,7 @@ The ensemble framework can be scaled to include additional models or modalities,
 
 ---
 
-## Challenges and Future Directions
+## Challenges and Future Directions :rocket:
 
 Despite its promise, our approach faces several limitations:
 
@@ -93,14 +93,14 @@ Despite its promise, our approach faces several limitations:
 2. **Complexity of Mild Cases:** The ensemble struggled to accurately classify mild COVID-19 cases, highlighting the need for more refined weighting mechanisms.
 3. **External Validation Diversity:** Although our study included multiple external datasets, further testing on a wider range of sources would strengthen the generalizability of the results.
 
-### Future Research
+### Future Research 
 - **Incorporating Metadata:** Using demographic and clinical data to refine predictions and identify biases.
 - **Exploring Advanced Techniques:** Investigating alternative ensemble methods, such as attention-based weighting.
 - **Expanding Applications:** Applying the methodology to other diseases and imaging modalities.
 
 ---
 
-## Conclusion
+## Conclusion :bulb:
 
 Our research demonstrates the transformative potential of ensemble learning for medical diagnostics. By addressing the generalization gap, this methodology offers a robust, scalable, and clinically viable solution for disease detection using AI. As we move forward, continued innovation and interdisciplinary collaboration will be key to realizing the full potential of AI in healthcare.
 
