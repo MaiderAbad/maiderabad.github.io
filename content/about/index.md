@@ -46,9 +46,11 @@ I am fascinated by combining disciplines to provide an integrated and complete s
 {{<skills>}}matplotlib{{</skills>}}
 {{<skills>}}scikit-learn{{</skills>}}
 {{<skills>}}Git{{</skills>}}
+{{<skills>}}GitHub{{</skills>}}
+{{<skills>}}GitLab{{</skills>}}
 
 <br>
-{{<button href="/docs/MAIDER ABAD_CV_EN.pdf" download="download" target="_self">}}
+{{<button href="/docs/MAIDER ABAD_CV_EN.pdf" download="CV_MaiderAbad" target="_self">}}
 Download CV
 {{</button>}}
 
